@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body
+>
+<h1>hãy viết gì đó </h1>
+<textarea onkeydown="nhap()" col="40p" rows="10" id="nhap"  ></textarea>
+<script>
+let a = ["t","ô","i"," ","l","à"," ","m","ộ","t"," ","h","e","r","o"];
+let giatri="";
+function nhap(){
+    let vanban = document.getElementById("nhap").value;
+    if(vanban.length > 0){
+        for (let i =0;i<vanban.length;i++){
+            giatri += a[i];
+            if(i ===15){
+                giatri = "";
+                document.getElementById("nhap").value= "";
+            }
+        }
+    }
+    document.getElementById("nhap").value= giatri;
+    giatri="";
+    setTimeout(nhap,1)
+}
+</script>
+</body>
+</html>
